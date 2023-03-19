@@ -20,11 +20,21 @@
         </div>
         <div class="col-lg-4 p-4">
             <h5 class="mb-3">Follow Us</h5>
-            <a href="https://www.instagram.com/" class="d-inline-block text-dark text-decoration-none mb-2">
-                <i class="bi bi-facebook" me-1></i> Facebook</a> <br>
-            <a href="https://www.instagram.com/" class="d-inline-block text-dark text-decoration-none mb-2">
+            <?php 
+                if($contact_r['fb']!=''){
+                    echo<<<data
+                        <a href="$contact_r[fb]" class="d-inline-block mb-3">
+                            <span class="badge bg-light text-dark fs-6 p-2">
+                            <i class="bi bi-facebook" me-1></i> Facebook
+                            </span>
+                        </a>
+                        <br>
+                    data;
+                }
+            ?>
+            <a href="<?php echo $contact_r['ig'] ?>" class="d-inline-block text-dark text-decoration-none mb-2">
                 <i class="bi bi-instagram" me-1></i> Instagram</a> <br>
-            <a href="https://www.instagram.com/" class="d-inline-block text-dark text-decoration-none">
+            <a href="<?php echo $contact_r['twt'] ?>" class="d-inline-block text-dark text-decoration-none">
                 <i class="bi bi-twitter" me-1></i> Twitter</a>                 
         </div>
     </div>
@@ -34,3 +44,24 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+<script>
+
+    function setActive(){
+
+        let navbar = document.getElementById('nav-bar');
+        let a_tags = navbar.getElementsByTagName('a');
+
+        for(i=0;i<a_tags.length; i++)
+        {
+            let file = a_tags[i].href.split('/').pop();
+            let file_name = file.split('.')[0];
+
+            if(document.location.href.indexOf(file_name) >=0 ){
+                a_tags[i].classList.add('active');
+            }   
+        }
+
+    }
+    setActive();    
+</script>

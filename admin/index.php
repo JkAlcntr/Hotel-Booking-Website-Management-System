@@ -43,7 +43,7 @@
 
       if (isset($_POST["login"])) 
       {
-      	$frm_data = filteration($_POST);
+      	$frm_data = filtration($_POST);
       	
       	$query = "SELECT * FROM `admin_cred` WHERE `admin_user`=? AND `admin_pass`=?";
       	$values = [$frm_data['admin_user'],$frm_data['admin_pass']];

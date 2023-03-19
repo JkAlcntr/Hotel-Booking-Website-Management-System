@@ -26,35 +26,47 @@
 
             <div class="col-lg-6 col-md-6 mb-5 px-4">
                 <div class="bg-white rounded shadow p-4">
-                    <iframe class="w-100 rounded mb-4" height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123030.70007582278!2d120.91098408789729!3d15.500056900729545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33972921652f4ccb%3A0x3ddca086bad37111!2sCabanatuan%20City%2C%20Nueva%20Ecija!5e0!3m2!1sen!2sph!4v1678898007374!5m2!1sen!2sph" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="w-100 rounded mb-4" height="320px" src="<?php echo $contact_r['iframe'] ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <!--Location-->
                     <h5>Address</h5>
-                    <a href="https://goo.gl/maps/Za2obHw3ejdZTuQT6" target="_blank" class="d-inline-block text-decoration-none text-dark mb-2">
-                        <i class="bi bi-geo-alt"></i> Cabanatuan City, Nueva Ecija
+                    <a href="<?php echo $contact_r['gmap'] ?>" target="_blank" class="d-inline-block text-decoration-none text-dark mb-2">
+                        <i class="bi bi-geo-alt"></i> <?php echo $contact_r['address']?>
                     </a>
                     <!--Number-->
                     <h5 class="mt-4">Call Us</h5>
-                    <a href="tel: +099123456" class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-phone-fill"></i> +6399123456
+                    <a href="tel: +<?php echo $contact_r['pn1']?>" class="d-inline-block mb-2 text-decoration-none text-dark">
+                        <i class="bi bi-phone-fill"></i> +<?php echo $contact_r['pn1']?>
                     </a>
                     <br>
-                    <a href="tel: +099123456" class="d-inline-block text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i> +6399123456
-                    </a>
+                    <?php
+                        if($contact_r['pn2']!=''){
+                            echo<<<data
+                                <a href="tel: +$contact_r[pn2]" class="d-inline-block text-decoration-none text-dark">
+                                    <i class="bi bi-telephone-fill"></i> +$contact_r[pn2]
+                                </a>
+                            data;
+                        }
+                    ?>
                     <!--Links-->
                     <h5 class="mt-4">Email</h5>
-                    <a href="mailto: juandelacruz@gmail.com" class="d-inline-block text-decoration-none text-dark">
-                    <i class="bi bi-envelope-at-fill"></i> juandelacruz@gmail.com
+                    <a href="mailto: <?php echo $contact_r['email'] ?>" class="d-inline-block text-decoration-none text-dark">
+                    <i class="bi bi-envelope-at-fill"></i> <?php echo $contact_r['email'] ?>
                     </a>
 
                     <h5 class="mt-4">Follow Us</h5>
-                    <a href="https://www.facebook.com/" class="d-inline-block mb-3 text-dark fs-5 me-2">
-                        <i class="bi bi-facebook me-1"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" class="d-inline-block mb-3 text-dark fs-5 me-2">
+                    <?php
+                        if($contact_r['fb']!=''){
+                            echo<<<data
+                                <a href="$contact_r[fb]" class="d-inline-block mb-3 text-dark fs-5 me-2">
+                                    <i class="bi bi-facebook me-1"></i>
+                                 </a>
+                            data;
+                        }
+                    ?>
+                    <a href="<?php echo $contact_r['ig'] ?>" class="d-inline-block mb-3 text-dark fs-5 me-2">
                         <i class="bi bi-instagram me-1"></i>
                     </a>
-                    <a href="https://www.twitter.com/" class="d-inline-block text-dark fs-5">
+                    <a href="<?php echo $contact_r['twt'] ?>" class="d-inline-block text-dark fs-5">
                         <i class="bi bi-twitter me-1"></i>
                     </a>
                 </div>

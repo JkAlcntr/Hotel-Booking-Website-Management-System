@@ -14,22 +14,22 @@
             <ul class="nav nav-pills flex-column">
             <li class="nav-item">
                 <a class="nav-link text-white " href="dashboard.php">
-                    <i class="bi bi-display"> Dashboard</i>
+                    <i class="bi bi-display"></i> Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                    <i class="bi bi-database-fill-add"> Rooms</i>
+                <a class="nav-link text-white" href="room.php">
+                    <i class="bi bi-database-fill-add"></i> Rooms
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                    <i class="bi bi-person-circle"> Users</i>
+                <a class="nav-link text-white" href="carousel.php">
+                    <i class="bi bi-person-circle"></i> Carousel
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="settings.php">
-                    <i class="bi bi-gear-wide-connected"> Settings</i>
+                    <i class="bi bi-gear-wide-connected"></i> Settings
                 </a>
             </li>
             </ul>                
