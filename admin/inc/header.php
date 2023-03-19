@@ -18,8 +18,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="room.php">
-                    <i class="bi bi-database-fill-add"></i> Rooms
+                <a class="nav-link text-white" href="queries.php">
+                    <i class="bi bi-database-fill-add"></i> User Queries
                 </a>
             </li>
             <li class="nav-item">

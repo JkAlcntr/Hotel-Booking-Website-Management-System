@@ -23,7 +23,7 @@
             <?php 
                 if($contact_r['fb']!=''){
                     echo<<<data
-                        <a href="$contact_r[fb]" class="d-inline-block mb-3">
+                        <a href="$contact_r[fb]" class="d-inline-block mb-2">
                             <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-facebook" me-1></i> Facebook
                             </span>
@@ -33,9 +33,9 @@
                 }
             ?>
             <a href="<?php echo $contact_r['ig'] ?>" class="d-inline-block text-dark text-decoration-none mb-2">
-                <i class="bi bi-instagram" me-1></i> Instagram</a> <br>
+            <span class="badge bg-light text-dark fs-6 p-2"><i class="bi bi-instagram" me-1></i> Instagram</a></span> <br>
             <a href="<?php echo $contact_r['twt'] ?>" class="d-inline-block text-dark text-decoration-none">
-                <i class="bi bi-twitter" me-1></i> Twitter</a>                 
+            <span class="badge bg-light text-dark fs-6 p-2"><i class="bi bi-twitter" me-1></i> Twitter</a></span>                 
         </div>
     </div>
 </div>
