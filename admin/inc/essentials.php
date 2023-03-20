@@ -4,11 +4,13 @@
     define('SITE_URL','http://localhost/hbms/');
 	define('ABOUT_IMG_PATH',SITE_URL.'images/about/');
 	define('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
+	define('FEATURES_IMG_PATH',SITE_URL.'images/features/');
     
 	//Back-end proccess data
 	define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/hbms/images/');
 	define('ABOUT_FOLDER','about/');
 	define('CAROUSEL_FOLDER','carousel/');
+	define('FEATURES_FOLDER','features/');
 
 	function adminLogin()
 	{
@@ -49,8 +51,8 @@
 		if(!in_array($img_mime,$valid_mime)){
 			return 'inv_img' ; //invalid image format
 		}
-		else if(($image['size']/(1024*1024))>2){
-			return	'inv_size' ; // invalid size greater than 2mb
+		else if(($image['size']/(1024*1024))>5){
+			return	'inv_size' ; // invalid size greater than 5mb
 		}
 		else{
 			$ext = pathinfo($image['name'], PATHINFO_EXTENSION);

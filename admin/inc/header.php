@@ -18,13 +18,18 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-white" href="features_facilities.php">
+                    <i class="bi bi-code-slash"></i> Features & Facilities
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-white" href="queries.php">
                     <i class="bi bi-database-fill-add"></i> User Queries
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="carousel.php">
-                    <i class="bi bi-person-circle"></i> Carousel
+                    <i class="bi bi-images"></i> Carousel
                 </a>
             </li>
             <li class="nav-item">

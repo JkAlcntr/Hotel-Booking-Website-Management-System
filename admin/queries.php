@@ -71,7 +71,7 @@
     <div class="container-fluid" id="main-content">
       <div class="row">
         <div class="col-lg-10 ms-auto p-4 overfow-hidden">
-          <h3 class="mb-3">QUERIES</h3>
+          <h3 class="mb-3"><i class="bi bi-database-fill-add"></i> QUERIES</h3>
 
           <!-- user queries section -->
 

@@ -18,7 +18,7 @@
     <div class="container-fluid" id="main-content">
       <div class="row">
         <div class="col-lg-10 ms-auto p-4 overfow-hidden">
-          <h3 class="mb-3">SETTINGS</h3>
+          <h3 class="mb-3"><i class="bi bi-gear-wide-connected"></i> SETTINGS</h3>
 
           <!--General settings section-->
 

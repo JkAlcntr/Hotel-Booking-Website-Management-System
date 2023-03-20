@@ -28,187 +28,40 @@
 
     <div class="container">
         <div class="row">
+            <?php
+                $res = selectAll('facilities');
+                $path = FEATURES_IMG_PATH;
 
-            <div class="col-lg-4 col-md-6 my-3 pop">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/features/spa.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>The Spa</h5>
-                        <h7 class="mb-4">
-                        The Spa is a haven of wellness and pampering where the steady and skilled hands of massage therapists employing traditional Filipino spa
-                        </h7>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">HOURS</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            24 hours advance notice recommended
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-spa: 7:00 am to 10:00 pm
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-room: 7:00 am to 12:00 am
-                            </span>
+                while($row = mysqli_fetch_assoc($res)){
+                    echo<<<data
+                        <div class="col-lg-4 col-md-6 my-3 pop">
+                            <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                <img src="$path$row[picture]" class="card-img-top">
+                                <div class="card-body">
+                                    <h5>$row[name]</h5>
+                                    <h7 class="mb-4">$row[description]</h7>
+                                    <div class="features mb-4">
+                                        <h6 class="mb-1 mt-2">HOURS</h6>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                        24 hours advance notice recommended
+                                        </span>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                        7:00 am to 10:00 pm
+                                        </span>
+                                    </div>
+                                    <div class="facilities mb-4">
+                                        <h6 class="mb-1">ENQUIRIES</h6>
+                                        <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                         +$contact_r[pn2]
+                                        </span>
+                                    </div>                      
+                                </div>
+                            </div>
                         </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">ENQUIRIES</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            +63 2 8887 2888
-                            </span>
-                        </div>                      
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 my-3 pop">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/features/exercise.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Fitness Centre</h5>
-                        <h7 class="mb-4">
-                        The Spa is a haven of wellness and pampering where the steady and skilled hands of massage therapists employing traditional Filipino spa
-                        </h7>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">HOURS</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            24 hours advance notice recommended
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-spa: 7:00 am to 10:00 pm
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-room: 7:00 am to 12:00 am
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">ENQUIRIES</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            +63 2 8887 2888
-                            </span>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 my-3 pop">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/features/pool.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>The Pool</h5>
-                        <h7 class="mb-4">
-                        The Spa is a haven of wellness and pampering where the steady and skilled hands of massage therapists employing traditional Filipino spa
-                        </h7>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">HOURS</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            24 hours advance notice recommended
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-spa: 7:00 am to 10:00 pm
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-room: 7:00 am to 12:00 am
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">ENQUIRIES</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            +63 2 8887 2888
-                            </span>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 my-3 pop">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/features/dining.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>Dining</h5>
-                        <h7 class="mb-4">
-                        The Spa is a haven of wellness and pampering where the steady and skilled hands of massage therapists employing traditional Filipino spa
-                        </h7>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">HOURS</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            24 hours advance notice recommended
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-spa: 7:00 am to 10:00 pm
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-room: 7:00 am to 12:00 am
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">ENQUIRIES</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            +63 2 8887 2888
-                            </span>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 my-3 pop">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/features/bar.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>The Bar</h5>
-                        <h7 class="mb-4">
-                        The Spa is a haven of wellness and pampering where the steady and skilled hands of massage therapists employing traditional Filipino spa
-                        </h7>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">HOURS</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            24 hours advance notice recommended
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-spa: 7:00 am to 10:00 pm
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-room: 7:00 am to 12:00 am
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">ENQUIRIES</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            +63 2 8887 2888
-                            </span>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 my-3 pop">
-                <div class="card border-0 shadow" style="max-width: 350px; margin: auto;">
-                    <img src="images/features/spa.jpg" class="card-img-top">
-                    <div class="card-body">
-                        <h5>The Spa</h5>
-                        <h7 class="mb-4">
-                        The Spa is a haven of wellness and pampering where the steady and skilled hands of massage therapists employing traditional Filipino spa
-                        </h7>
-                        <div class="features mb-4">
-                            <h6 class="mb-1">HOURS</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            24 hours advance notice recommended
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-spa: 7:00 am to 10:00 pm
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            In-room: 7:00 am to 12:00 am
-                            </span>
-                        </div>
-                        <div class="facilities mb-4">
-                            <h6 class="mb-1">ENQUIRIES</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
-                            +63 2 8887 2888
-                            </span>
-                        </div>                      
-                    </div>
-                </div>
-            </div>
-
+                    data;
+                }
+            ?>
+            
         </div>        
     </div>
 
