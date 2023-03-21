@@ -138,8 +138,8 @@
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-half text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
                             </span>
                         </div>
                         <div  class="d-flex justify-content-evenly mb-2">
@@ -192,8 +192,8 @@
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-half text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
                             </span>
                         </div>
                         <div  class="d-flex justify-content-evenly mb-2">

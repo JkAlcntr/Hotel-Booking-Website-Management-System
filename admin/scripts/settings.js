@@ -12,6 +12,12 @@ let team_s_form = document.querySelector('.team_s_form');
 let member_name_inp = document.getElementById('member_name_inp');
 let member_picture_inp = document.getElementById('member_picture_inp');
 
+general_s_form.addEventListener('submit',function(e)
+{
+    e.preventDefault();
+    upd_general(site_title_inp.value,site_about_inp.value);
+});
+
 function get_general()
 {
     let site_title = document.getElementById('site_title');
@@ -45,11 +51,7 @@ function get_general()
     xhr.send('get_general');
 }
 
-general_s_form.addEventListener('submit',function(e)
-{
-    e.preventDefault();
-    upd_general(site_title_inp.value,site_about_inp.value);
-});
+
 
 function upd_general(site_title_val,site_about_val)
 {

@@ -23,6 +23,11 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-white" href="rooms.php">
+                    <i class="bi bi-database-fill-add"></i> Rooms
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-white" href="queries.php">
                     <i class="bi bi-database-fill-add"></i> User Queries
                 </a>

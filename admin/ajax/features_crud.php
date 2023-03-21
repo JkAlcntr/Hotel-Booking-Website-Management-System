@@ -119,4 +119,52 @@
       echo 0;
     }
   }
+
+  if(isset($_POST['add_addons']))
+  {
+    $frm_data = filtration($_POST);
+
+    $q = "INSERT INTO `addons`(`name`) VALUES (?)";
+      $values = [$frm_data['name']];
+      $res = insert($q, $values, 's');
+      echo $res;
+        
+  }
+
+  if(isset($_POST['get_addons']))
+  {
+    $res = selectAll('addons');
+    $id = 1;
+
+    while($row = mysqli_fetch_assoc($res))
+    {
+      echo <<<data
+      <tr>
+        <td>$id</td>
+        <td>$row[name]</td>
+        <td>
+          <button type="button" onclick="rem_addons($row[id_no])" class="btn btn-danger btn-sm shadow-none">
+            <i class="bi bi-trash"></i> Delete
+          </button>        
+        </td>
+      </tr>        
+      data;
+      $id++;
+    }
+  }
+
+  if(isset($_POST['rem_addons']))
+  {
+    $frm_data = filtration($_POST);
+    $values = [$frm_data['rem_addons']];
+
+    $q = "DELETE FROM `addons` WHERE `id_no`=?";
+    $res = delete($q,$values,'i');
+    echo $res;
+
+    $pre_q = "SELECT * FROM `addons` WHERE `id_no`=? ";
+    $res = select($pre_q,$values,'i');
+    $img = mysqli_fetch_assoc($res);
+
+  }
 ?>
